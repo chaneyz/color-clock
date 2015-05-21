@@ -1,5 +1,6 @@
-//lets display the current time
+//displays the current time
 var d, h, m, s, clock;
+//created a function named 'displayTime' to run 
 function displayTime() {
 	d = new Date();
 	h = d.getHours();
@@ -22,10 +23,14 @@ if(s <= 9) {
 clock = h+":"+m+":"+s;
 
 document.getElementById("clkcolor").innerHTML = clock;
-	
-var colors = ["#221752","#c0c0c0","#587b2e","#000000","#464646","#99081E"];
 
+//hand picked colors in an array called 'colors'
+var colors = ["#221752","#c0c0c0","#587b2e","#000000","#464646","#99081E"];
+//created a variable for choosing a random color from the length of the 'colors' array
+//and named it 'bodyColor'
 var bodyColor = Math.floor(Math.random() * colors.length);
+
+
 var selectedcolor = colors[bodyColor];
 
 document.body.style.background = selectedcolor;

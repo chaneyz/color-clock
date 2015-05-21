@@ -1,16 +1,16 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100");
-/*basic reset*/
+
 * {margin: 0; padding: 0;}
-/*make the body occupy full height*/
+
 html, body {height: 100%;}
 
 #clkcolor {
-	color: white; font: 125px/125px Lato; height: 125px;
-	/*Vertical centering*/
-	position: relative; top: 50%; margin-top: -32px;
-	/*Horizontal centering*/
+	color: white; 
+	font: 125px/125px Lato; 
+	height: 125px;
+	position: relative; 
+	top: 50%; 
+	margin-top: -32px;
 	text-align: center;
 	opacity:1;
-	-webkit-transition: opacity 1s background-color 1s;
-	transition: opacity 1s background-color 1s; 
 }
