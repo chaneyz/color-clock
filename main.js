@@ -1,28 +1,46 @@
-var boxElement = document.querySelector('.box');
-boxElement.style.width = '500px';
-boxElement.style.height = '500px';
-boxElement.style.backgroundColor = 'red';
-
-var currentDate = new Date();
-console.log(currentDate);
-// var currentHours = currentTime.getHours ();
-// console.log(currentHours);
-var currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
-console.log(currentMinutes);
-var currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
-console.log(currentSeconds);
-
-
-
-function changeColor() {
-	var currentColor = boxElement.style.backgroundColor;
-	if(currentColor == '') {
-		currentColor = 0;
-	}
-	var newColor = parseInt(currentColor) + 1;
-	console.log(newColor);
-	boxElement.style.backgroundColor = newColor+'blue';
-	console.log(boxElement.style.backgroundColor);
+//lets display the current time
+var d, h, m, s, color;
+function displayTime() {
+	d = new Date(); //new data object
+	h = d.getHours();
+	m = d.getMinutes();
+	s = d.getSeconds();
+	
+	//add zero to the left of the numbers if they are single digits
+	if(h <= 9) h = '0'+h;
+	if(m <= 9) m = '0'+m;
+	if(s <= 9) s = '0'+s;
+	
+	color = "#"+h+m+s;
+	//set background color
+	document.body.style.background = color;
+	//set time
+	document.getElementById("hex").innerHTML = color;
+	
+	//retrigger the function every second
+	setTimeout(displayTime, 2000);
 }
 
-// setInterval(changeColor, 50);
+//call the function
+displayTime();
+
+
+function updateClock() {
+	
+}
+
+
+function changeBackground() {
+
+var colors = ["#0099cc","#c0c0c0","#587b2e","#990000","#1C8200","#987baa","#464646","#AA8971","#1987FC","#99081E"];
+
+setInterval(function() {
+
+var bodybgarrayno = Math.floor(Math.random() * colors.length);
+var selectedcolor = colors[bodybgarrayno];
+
+document.body.style.background = selectedcolor;
+	}, 1000);
+}
+
+changeBackground();
