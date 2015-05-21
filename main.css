@@ -1,6 +1,3 @@
-/*styling #hex*/
-
-/*custom font - Lato*/
 @import url("http://fonts.googleapis.com/css?family=Lato:100");
 /*basic reset*/
 * {margin: 0; padding: 0;}
@@ -8,9 +5,12 @@
 html, body {height: 100%;}
 
 #clkcolor {
-	color: white; font: 64px/64px Lato; height: 64px;
+	color: white; font: 125px/125px Lato; height: 125px;
 	/*Vertical centering*/
 	position: relative; top: 50%; margin-top: -32px;
 	/*Horizontal centering*/
 	text-align: center;
+	opacity:1;
+	-webkit-transition: opacity 1s background-color 1s;
+	transition: opacity 1s background-color 1s; 
 }
