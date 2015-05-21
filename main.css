@@ -7,11 +7,10 @@
 /*make the body occupy full height*/
 html, body {height: 100%;}
 
-#hex {
+#clkcolor {
 	color: white; font: 64px/64px Lato; height: 64px;
 	/*Vertical centering*/
 	position: relative; top: 50%; margin-top: -32px;
 	/*Horizontal centering*/
 	text-align: center;
-	transition: opacity 1s ease-in;
 }
