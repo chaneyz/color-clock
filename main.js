@@ -18,29 +18,29 @@ function displayTime() {
 	document.getElementById("hex").innerHTML = color;
 	
 	//retrigger the function every second
-	setTimeout(displayTime, 2000);
+	setTimeout(displayTime, 1000);
 }
 
 //call the function
 displayTime();
 
 
-function updateClock() {
+// function updateClock() {
 	
-}
+// }
 
 
-function changeBackground() {
+// function changeBackground() {
 
-var colors = ["#0099cc","#c0c0c0","#587b2e","#990000","#1C8200","#987baa","#464646","#AA8971","#1987FC","#99081E"];
+// var colors = ["#0099cc","#c0c0c0","#587b2e","#990000","#1C8200","#987baa","#464646","#AA8971","#1987FC","#99081E"];
 
-setInterval(function() {
+// setInterval(function() {
 
-var bodybgarrayno = Math.floor(Math.random() * colors.length);
-var selectedcolor = colors[bodybgarrayno];
+// var bodybgarrayno = Math.floor(Math.random() * colors.length);
+// var selectedcolor = colors[bodybgarrayno];
 
-document.body.style.background = selectedcolor;
-	}, 1000);
-}
+// document.body.style.background = selectedcolor;
+// 	}, 1000);
+// }
 
-changeBackground();
+// changeBackground();
